@@ -1,0 +1,87 @@
+.blog {
+  &__btn {
+    max-height: 52px;
+  }
+  &__title_and_btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__wrapper {
+    margin-top: 60px;
+    @include grid-12;
+    gap: 10px;
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__item {
+    width: 390px;
+    height: 507px;
+    grid-column: 4 span;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    @include tablet {
+      grid-column: 6 span;
+      column-gap: 100px;
+    }
+    @include mobile {
+      width: 310px;
+    }
+
+    &--data {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: var(--gray-700);
+    }
+
+    &--question {
+      margin-top: 8px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--gray-900);
+    }
+    &--text {
+      margin-top: 8px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--gary-800);
+    }
+
+    &--link {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--gray-900);
+    }
+    & a > svg {
+      margin-left: 10px;
+    }
+
+    &--copy {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 5px 8px;
+      border-radius: 10px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: var(--gray-800);
+      background-color: var(--light-color);
+    }
+  }
+}

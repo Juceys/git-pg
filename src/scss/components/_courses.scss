@@ -1,0 +1,87 @@
+.courses {
+  &__header {
+    @include flex-sb;
+    align-items: flex-end;
+    margin-bottom: 60px;
+  }
+  &__wrapper {
+    @include grid-12;
+    row-gap: 30px;
+    column-gap: 30px;
+    @include tablet {
+      justify-items: center;
+    }
+  }
+
+  .card {
+    display: flex;
+    max-width: 600px;
+    grid-column: 6 span;
+    border: 1px solid #e5e8ed;
+    border-radius: 4px;
+    /* shadow/small */
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08),
+      0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+      0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+      0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+
+    @include tablet {
+      max-width: 214px;
+      flex-direction: column;
+      grid-column: 4 span;
+    }
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+    @include mobile {
+      grid-column: 12 span;
+    }
+
+    &__content {
+      @include flex-col-sb;
+      padding: 32px;
+      @include small-tablet {
+        padding: 5px;
+      }
+    }
+    &__job {
+      padding: 1px 8px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      border-radius: 4px;
+      background-color: #03cea4;
+      color: var(--light-color);
+    }
+
+    &:nth-child(2) .card__job,
+    &:nth-child(5) .card__job {
+      background-color: #5a87fc;
+    }
+    &:nth-child(3) .card__job {
+      background-color: #f89828;
+    }
+    &:nth-child(6) .card__job {
+      background-color: #f52f6e;
+    }
+
+    &__descr {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--gray-900);
+    }
+    &__price {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+      color: var(--accent-color);
+    }
+    &__author {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 150%;
+      color: var(--gray-700);
+    }
+  }
+}

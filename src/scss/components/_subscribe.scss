@@ -1,0 +1,36 @@
+.subscribe {
+  background: url("../img/subscribe-1.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+
+  &__container {
+    max-width: 810px;
+  }
+
+  &__tagline {
+    padding: 120px 0 8px;
+    text-transform: uppercase;
+  }
+
+  &__tagline,
+  &__title {
+    text-align: center;
+  }
+
+  .sibscribe__contant {
+    width: 600px;
+    margin: auto;
+  }
+  &__form {
+    width: 100%;
+    padding-bottom: 60px;
+  }
+  .form__btn {
+    margin-top: 30px;
+    @include mobile {
+      display: none;
+    }
+  }
+}

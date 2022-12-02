@@ -1,0 +1,56 @@
+.about {
+  background: url("../img/about-bg.png") no-repeat;
+  // url("../img/about.jpg") no-repeat;
+  background-position: bottom;
+  background-size: 100% 484px;
+
+  &__container {
+    @include flex-sb;
+    @include small-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    margin: 10px 0 40px;
+  }
+  &__list {
+    padding-left: 30px;
+    margin-bottom: 22px;
+    max-width: 390px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--gray-800);
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+  .list__item {
+    @include mb(12px);
+    position: relative;
+  }
+
+  .list__item::before {
+    content: "";
+    position: absolute;
+    background: no-repeat;
+    background: url("../img/check.svg") no-repeat;
+    left: -30px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+  }
+  &__img {
+    width: 705px;
+    height: 90%;
+    @include tablet {
+      width: 50%;
+      height: 500px;
+    }
+    @include small-tablet {
+      display: none;
+    }
+  }
+}

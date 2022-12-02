@@ -1,0 +1,83 @@
+.hero {
+  @include image-set("../img/background.jpg");
+  background-size: cover;
+
+  &__container {
+    padding-top: 70px;
+  }
+  &__top {
+    @include flex-sb;
+    padding-top: 128px;
+    @include high-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    margin-top: 24px;
+    margin-bottom: 60px;
+    max-width: 500px;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 130%;
+    color: var(gray-900);
+    @include high-tablet {
+      font-size: 50px;
+    }
+    @include mobile {
+      font-size: 32px;
+    }
+  }
+
+  &__picture img {
+    width: 110%;
+    height: 551px;
+    @include high-tablet {
+      display: none;
+    }
+  }
+  &__about {
+    margin-right: 24px;
+  }
+
+  &__bottom {
+    @include flex-v-center;
+    margin-top: 206px;
+    padding-bottom: 30px;
+
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__btns > * {
+    margin: 15px;
+  }
+  .static {
+    & > * {
+      @include mr(60px);
+    }
+    &__item {
+      @include flex-v-center;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: var(gray-900);
+    }
+    &__digit {
+      padding-right: 12px;
+      font-weight: 900;
+      font-size: 46px;
+      line-height: 130%;
+      color: var(--gray-900);
+      @include mobile {
+        font-size: 32px;
+      }
+    }
+    &__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background-color: var(--accent-color);
+    }
+  }
+}

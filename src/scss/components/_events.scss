@@ -1,0 +1,99 @@
+.events {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: url("../img/event.png") no-repeat;
+  background-size: cover;
+
+  &__container {
+  }
+
+  &__tagline,
+  &__title {
+    text-align: center;
+  }
+
+  &__contant {
+    margin-top: 60px;
+    max-width: 1300px;
+  }
+
+  &__item:hover {
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.16),
+      0px 30px 24px -10px rgba(255, 63, 58, 0.1),
+      0px 12px 10px -6px rgba(255, 63, 58, 0.08),
+      0px 80px 80px -20px rgba(255, 63, 58, 0.16);
+  }
+  &__item {
+    @include flex-sb;
+    position: relative;
+    @include mb(24px);
+    padding: 32px 40px;
+    background-color: #fff;
+    border-radius: 4px;
+    z-index: 0;
+    @include tablet {
+      margin: 30px auto;
+      max-width: 500px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--wrapper {
+      display: flex;
+      @include tablet {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+
+    &--num {
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 130%;
+      color: var(--accent-color);
+    }
+
+    &--data {
+      padding-left: 20px;
+      padding-right: 40px;
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &--month,
+    &--caption {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--gray-900);
+    }
+    &--time,
+    &--descr {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--gray-600);
+    }
+  }
+  &__btn {
+    margin-left: 35px;
+    max-height: 44px;
+    width: 160px;
+  }
+  &__footer {
+    margin-top: 60px;
+    @include flex-all-center;
+    &__excerpt {
+      margin-right: 40px;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 150%;
+      color: var(--gray-900);
+    }
+  }
+}

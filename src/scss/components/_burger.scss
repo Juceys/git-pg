@@ -1,0 +1,45 @@
+@include high-tablet {
+  .burger {
+    margin-left: auto;
+    position: relative;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    width: 44px;
+    height: 44px;
+
+    &__line {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 100px;
+      width: 26px;
+      height: 2px;
+      background-color: var(--accent-color);
+      transform: translateX(-50%) translateY(-50%);
+
+      &:first-child {
+        margin-top: -7px;
+      }
+      &:last-child {
+        left: 8px;
+        margin-top: 7px;
+        width: 13px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .burger-close {
+    position: absolute;
+    right: var(--container-offset);
+    top: 30px;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    width: 44px;
+    height: 44px;
+    background-image: url("../img/close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px 12px;
+  }
+}
