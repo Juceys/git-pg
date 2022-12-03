@@ -3,6 +3,7 @@
   "version": "2.1.0",
   "description": "gulp-builder for weblayout",
   "main": "gulpfile.js",
+  "homepage": "https://Juceys.github.io/",
   "scripts": {
     "html": "node-w3c-validator -f lint -evH -i app/**/*.html",
     "dev": "gulp",
@@ -21,6 +22,7 @@
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
     "editorconfig-checker": "^4.0.1",
+    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-cheerio": "^1.0.0",
