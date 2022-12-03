@@ -1,5 +1,5 @@
-/.vscode
-/src
 /node_modules
 package-lock.json
 README.md
+/.vscode
+/src
